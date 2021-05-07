@@ -3,8 +3,8 @@ package com.hsy.opengl;
 import android.app.Application;
 
 public class MyApplication extends Application {
-    private static MyApplication application;
 
+    private static MyApplication application;
 
     public static MyApplication getApplication() {
         return application;

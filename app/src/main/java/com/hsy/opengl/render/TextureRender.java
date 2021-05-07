@@ -5,6 +5,7 @@ import android.opengl.GLES20;
 import android.opengl.GLES30;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
+import android.util.Log;
 
 import com.hsy.opengl.R;
 import com.hsy.opengl.util.RenderUtil;
@@ -18,7 +19,11 @@ import java.nio.ShortBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+/**
+ * 纹理渲染
+ */
 public class TextureRender implements GLSurfaceView.Renderer {
+
     private static final String TAG = "TextureRenderer";
 
     private final FloatBuffer vertexBuffer, mTexVertexBuffer;
@@ -26,6 +31,7 @@ public class TextureRender implements GLSurfaceView.Renderer {
     private final ShortBuffer mVertexIndexBuffer;
     private int uMatrixLocation;
 
+    //一维数组
     private float[] mMatrix = new float[16];
 
     private int mProgram;
@@ -142,6 +148,7 @@ public class TextureRender implements GLSurfaceView.Renderer {
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
+        Log.d(TAG, "onSurfaceChanged_width_" + width + "height_" + height);
         GLES30.glViewport(0, 0, width, height);
 
         final float aspectRatio = width > height ?

@@ -18,7 +18,7 @@ public class TextureActivity extends AppCompatActivity {
     private void setupViews() {
         mGLSurfaceView = new GLSurfaceView(this);
         setContentView(mGLSurfaceView);
-        //设置版本
+        //设置gl版本为3
         mGLSurfaceView.setEGLContextClientVersion(3);
         GLSurfaceView.Renderer renderer = new TextureRender(this);
         mGLSurfaceView.setRenderer(renderer);

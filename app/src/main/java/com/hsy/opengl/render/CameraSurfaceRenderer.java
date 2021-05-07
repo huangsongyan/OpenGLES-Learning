@@ -123,6 +123,12 @@ public class CameraSurfaceRenderer implements GLSurfaceView.Renderer {
         mVertexIndexBuffer.position(0);
     }
 
+    /**
+     * 设置旋转方向
+     *
+     * @param cameraId
+     * @param camera
+     */
     private void setCameraDisplayOrientation(int cameraId, Camera camera) {
         Activity targetActivity = (Activity) mGLSurfaceView.getContext();
         android.hardware.Camera.CameraInfo info =

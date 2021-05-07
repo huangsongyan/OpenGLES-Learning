@@ -101,7 +101,7 @@ public class Camera2SurfaceRenderer implements GLSurfaceView.Renderer {
         //加载纹理
         textureId = loadTexture();
         mSurfaceTexture = new SurfaceTexture(textureId);
-//设置背景颜色
+        //设置背景颜色
         GLES30.glClearColor(0.5f, 0.5f, 0.5f, 0.5f);
         //编译
         final int vertexShaderId = RenderUtil.compileShader(GLES30.GL_VERTEX_SHADER, ResReadUtils.readResource(R.raw.vertex_camera_shader));
